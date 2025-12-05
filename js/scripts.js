@@ -23,7 +23,21 @@ function checkout(clickedButton) {
     checkout_page.classList.remove("d-none")
 }
 function moveToCart(clickedButton) {
-    console.log(clickedButton)
-    dinner_1.classList.remove("btn-primary");
-    dinner_1.classList.add("btn-secondary");
-}
+    console.log(clickedButton.id);
+    const clicked_id = document.getElementById(clickedButton.id)
+    clicked_id.classList.remove("btn-primary");
+    clicked_id.classList.add("btn-secondary");
+    clicked_id.classList.add("disabled");
+    let item = clickedButton.parentNode.querySelector(".card-title").textContent;
+    let textNode = document.createTextNode(item+"   ");
+    let td = document.createElement("td");
+    let tr = document.createElement("tr");
+    tr.appendChild(td);
+    td.appendChild(textNode);
+    let price = clickedButton.parentNode.querySelector(".card-text").textContent;
+    let textPrice = document.createTextNode(price);
+    td.appendChild(textPrice)
+    document.getElementById("table").appendChild(tr);
+
+
+}             
