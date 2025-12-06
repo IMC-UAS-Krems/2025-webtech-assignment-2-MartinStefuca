@@ -11,10 +11,11 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script defer src="js/scripts.js"></script>
+    
 </head>
 
 <body class="d-flex flex-column min-vh-100"> <!--classes from bootstrap to make the footer stick to the bottom-->
-    <nav class="navbar bg-body-tertiary"> <!--navbar is from bootstrap-->
+    <nav class="navbar bg-body-tertiary sticky-top"> <!--navbar is from bootstrap-->
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/img/button_15982812.png" alt="Logo" width="40" height="30"
@@ -146,13 +147,14 @@
             <section>
                 <div id="shopping_cart" class="container d-none">
                     <h2 class="content">This is what you are donating to:</h2>
-                    <table id="table" class="table m-3">
+                    <table id="table" class="table m-3 table-bordered border-primary">
                         
 
 
                     </table>
-                    <p>In total: </p>
-                    <button class="button" id="checkout" onclick="checkout(this)">Checkout</button>
+                    <p>In total: <span id="total_price_position"></span></p>
+                    <p id="thank_you" class="fw-bold d-none">Thank you for your enormous help, since you have purchased 3 or more items, we will send you a special gift &#128521;</p>
+                    <button class="btn btn-success" id="checkout" onclick="checkout(this)">Checkout</button>
                 </div>
             </section>
             <section>
@@ -172,12 +174,13 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">I want to receive photos of people I have helped</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </form>
 
                 </div>
             </section>
         </article>
+        
     </main>
     <footer class="bg-body-tertiary text-center text-lg-start footer mt-auto">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">

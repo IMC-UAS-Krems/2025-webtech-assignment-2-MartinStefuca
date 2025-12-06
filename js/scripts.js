@@ -1,4 +1,5 @@
 let money_to_pay = 0
+let number_i_donated = 0
 
 const gallery_page = document.getElementById("gallery_page");
 const dinner_1 = document.getElementById("dinner_1");
@@ -29,15 +30,65 @@ function moveToCart(clickedButton) {
     clicked_id.classList.add("btn-secondary");
     clicked_id.classList.add("disabled");
     let item = clickedButton.parentNode.querySelector(".card-title").textContent;
-    let textNode = document.createTextNode(item+"   ");
+    let textNode = document.createTextNode(item);
     let td = document.createElement("td");
     let tr = document.createElement("tr");
     tr.appendChild(td);
     td.appendChild(textNode);
     let price = clickedButton.parentNode.querySelector(".card-text").textContent;
+    let td_price = document.createElement("td");
     let textPrice = document.createTextNode(price);
-    td.appendChild(textPrice)
+    let td_remove = document.createElement("td");
+    const remove_button = document.createElement("div")
+    remove_button.innerHTML = "<button class='btn btn-danger' onclick='removeFromCart(this)'>X</button>"
+    td_remove.appendChild(remove_button)
+    td_price.appendChild(textPrice);
+    tr.appendChild(td_price);
+    tr.appendChild(td_remove)
     document.getElementById("table").appendChild(tr);
+    let price_str = clickedButton.parentNode.querySelector(".card-text").textContent.toString().slice(0,-1);
+    money_to_pay +=  Number(price_str);
+    document.getElementById("total_price_position").innerText = money_to_pay.toString() + "€";
+    number_i_donated += 1 
+    
+    if (number_i_donated >= 3) {
+        document.getElementById("thank_you").classList.remove("d-none")
 
+    } else {
+        document.getElementById("thank_you").classList.add("d-none")
 
+    }
+    
+    console.log(clickedButton.id)
+    let td_id_div = document.createElement("td");
+    const id_div = document.createElement("div")
+    id_div.innerHTML = `<p class='d-none'>${clickedButton.id}</p>`
+    td_id_div.appendChild(id_div)
+    tr.appendChild(td_id_div)
 }             
+function removeFromCart(clickedButton) {
+    console.log(clickedButton);
+    number_i_donated -= 1;
+    let price = clickedButton.parentNode.parentNode.parentNode.children.item(1);
+    console.log(price);
+    let price_number = Number(price.textContent.slice(0,-1));
+    console.log(price_number);
+    money_to_pay -= price_number;
+    clickedButton.parentNode.parentNode.parentNode.classList.add("d-none");
+    document.getElementById("total_price_position").textContent = money_to_pay.toString()+"€";
+     if (number_i_donated >= 3) {
+        document.getElementById("thank_you").classList.remove("d-none");
+
+    } else {
+        document.getElementById("thank_you").classList.add("d-none");
+
+    }
+    
+    
+    let path_to_id_rm = clickedButton.parentNode.parentNode.parentNode.children.item(3).children.item(0).children.item(0)
+    console.log(path_to_id_rm)
+    let id = path_to_id_rm.textContent
+    document.getElementById(id).classList.remove("btn-secondary")
+    document.getElementById(id).classList.remove("disabled")
+    document.getElementById(id).classList.add("btn-primary")
+}
