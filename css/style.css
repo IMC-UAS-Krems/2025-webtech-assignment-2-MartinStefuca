@@ -2,3 +2,14 @@
     text-align: center;
     font-family: Neuton;
 }
+body{
+    font-family: Neuton;
+}
+.bg_img {
+    background-image: url(/img/background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 65px;
+}

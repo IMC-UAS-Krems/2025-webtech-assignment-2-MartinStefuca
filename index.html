@@ -11,12 +11,12 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script defer src="js/scripts.js"></script>
-    
+
 </head>
 
 <body class="d-flex flex-column min-vh-100"> <!--classes from bootstrap to make the footer stick to the bottom-->
-    <nav class="navbar bg-body-tertiary sticky-top"> <!--navbar is from bootstrap-->
-        <div class="container-fluid">
+    <nav class="navbar bg-body-tertiary sticky-top m-0 p-0"> <!--navbar is from bootstrap-->
+        <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.1); margin: 0; padding: 8px;">
             <a class="navbar-brand" href="#">
                 <img src="/img/button_15982812.png" alt="Logo" width="40" height="30"
                     class="d-inline-block align-text-top">
@@ -28,25 +28,24 @@
                     width="40" height="40" class="d-inline-block align-text-top"></button>
         </div>
     </nav>
-    <header>
-        <h1 class="heading h1 m-4">Please support people in need</h1>
-    </header>
     <main>
         <article>
             <section>
-                <div id="gallery_page" class="container">
+                <div id="gallery_page" class="bg_img">
+                    <h1 class="heading h1 mb-5">Please support people in need</h1>
                     <div class="container text-center">
                         <div class="row">
-                            <div class="card" style="width: 18rem;">
+
+                            <div class="card col-md-3 col-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/dinner_for1.jpg" class="card-img-top" alt="Dinner for one person">
                                 <div class="card-body">
                                     <h5 class="card-title">Dinner for 1 person</h5>
                                     <p class="card-text">1€</p>
-                                    <a id="dinner_1" onclick="moveToCart(this)"
-                                        class="btn btn-primary">Donate</a>
+                                    <a id="dinner_1" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+
+                            <div class="card col-md-3 col-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/food_for_5.jpg" class="card-img-top" alt="Dinner for 5 people">
                                 <div class="card-body">
                                     <h5 class="card-title">Dinner for 10 people</h5>
@@ -54,7 +53,7 @@
                                     <a id="dinner_10" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/food_for100_2.jpg" class="card-img-top" alt="food for 100 people">
                                 <div class="card-body">
                                     <h5 class="card-title">Food for 1000 people</h5>
@@ -62,16 +61,16 @@
                                     <a id="food_100" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/eye_surgery.jpg" class="card-img-top"
-                                    alt="Eye surgery for a person that can't afford it">
+                                    alt="Eye surgery for a person who can't afford it">
                                 <div class="card-body">
                                     <h5 class="card-title">Eye surgery for a person</h5>
                                     <p class="card-text">3000€</p>
                                     <a id="eye_surgery" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/mobility_aids.jpg" class="card-img-top"
                                     alt="mobility aids and adaptive equipment for a person that can't afford it">
                                 <div class="card-body">
@@ -80,7 +79,7 @@
                                     <a id="mobility_aids" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/awell.jpg" class="card-img-top"
                                     alt="Donate to help build a well in Africa">
                                 <div class="card-body">
@@ -89,7 +88,7 @@
                                     <a id="well" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/pink_ribbon.jpg" class="card-img-top" alt="Donate to help fight cancer">
                                 <div class="card-body">
                                     <h5 class="card-title">Donate to help fight cancer</h5>
@@ -97,7 +96,7 @@
                                     <a id="cancer" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/deforest.jpg" class="card-img-top"
                                     alt="Donate to help plant trees in deforested areas">
                                 <div class="card-body">
@@ -105,17 +104,17 @@
                                     <p class="card-text">5€</p>
                                     <a id="trees" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
-                            </div>
-                            <div class="card" style="width: 18rem;">
+                            </div> 
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/unhoused.jpg" class="card-img-top"
                                     alt="Donate to help build shelters for the unhoused">
                                 <div class="card-body">
-                                    <h5 class="card-title">Donate to help build shelters for the unhoused</h5>
+                                    <h5 class="card-title">Help build shelters for the unhoused</h5>
                                     <p class="card-text">5€</p>
                                     <a id="shelters" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/schoolA.jpg" class="card-img-top" alt="Dinner for one person">
                                 <div class="card-body">
                                     <h5 class="card-title">Donate to help build schools in Africa</h5>
@@ -123,20 +122,22 @@
                                     <a id="schools" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
-                                <img src="/img/stray_dog.jpg" class="card-img-top" alt="Suppoert local animal shelters">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
+                                <img src="/img/stray_dog.jpg" class="card-img-top" alt="Support local animal shelters">
                                 <div class="card-body">
                                     <h5 class="card-title">Support local animal shelters</h5>
                                     <p class="card-text">5€</p>
-                                    <a id="animal_shelters" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
+                                    <a id="animal_shelters" onclick="moveToCart(this)"
+                                        class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
-                            <div class="card" style="width: 18rem;">
+                            <div class="card col-md-3 col-xs-12 m-auto mb-4 shadow" style="width: 18rem;">
                                 <img src="/img/bees.jpg" class="card-img-top" alt="Support a bee-conservation project">
                                 <div class="card-body">
                                     <h5 class="card-title">Support a bee-conservation project</h5>
                                     <p class="card-text">5€</p>
-                                    <a id="bee_conservation" onclick="moveToCart(this)" class="btn btn-primary">Donate</a>
+                                    <a id="bee_conservation" onclick="moveToCart(this)"
+                                        class="btn btn-primary">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -145,50 +146,122 @@
                 </div>
             </section>
             <section>
-                <div id="shopping_cart" class="container d-none">
-                    <h2 class="content">This is what you are donating to:</h2>
+                <div id="shopping_cart" class="d-none container">
+                    <h2 class="content h1 m-3">This is what you are donating to:</h2>
                     <table id="table" class="table m-3 table-bordered border-primary">
-                        
+
 
 
                     </table>
-                    <p>In total: <span id="total_price_position"></span></p>
-                    <p id="thank_you" class="fw-bold d-none">Thank you for your enormous help, since you have purchased 3 or more items, we will send you a special gift &#128521;</p>
-                    <button class="btn btn-success" id="checkout" onclick="checkout(this)">Checkout</button>
-                </div>
+                    <p class="text-center">Total: <span id="total_price_position"></spa></p>
+                    <p id="thank_you" class="fw-bold d-none">Thank you for your enormous help! Since you have purchased
+                        3 or more items, we will send you a special gift &#128521;</p>
+                        <div class="justify-content-center d-flex">
+                        <button class="btn btn-success" id="checkout" onclick="checkout(this)">Checkout</button>
+                        </div>
+                    </div>
             </section>
             <section>
-                <div id="checkout_page" class="container d-none">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div id="checkout_page" class="container d-none mt-5">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-3">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="firstName" autocomplete="given-name" name="firstName" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        <div class="col-md-3">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lastName" autocomplete="family-name" name="lastName" required>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">I want to receive photos of people I have helped</label>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">E-mail</label>
+                            <div class="input-group has-validation">
+                                <input type="email" placeholder="@" class="form-control" id="email" autocomplete="email" name="email" aria-describedby="inputGroupPrepend"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Please use a valid E-mail.
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <div class="col-md-6">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="state" class="form-label">State</label>
+                            <select class="form-select" id="state" name="state" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>Austria</option>
+                                <option>Czech Republic</option>
+                                <option>Germany</option>
+                                <option>Hungary</option>
+                                <option>Poland</option>
+                                <option>Switzerland</option>
+                                <option>Slovakia</option>
+                                <option>Other</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" placeholder="12345" id="zip" maxlength="5" pattern="[0-9]{5}" autocomplete="postal-code" name="zip" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" pattern="[0-9]{13,19}"  class="form-control" id="cardNumber" name="cardNumber" required>
+                            <div class="invalid-feedback">
+                                Please provide a Card Number.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="expirationDate" class="form-label">Expiration Date</label>
+                            <input type="text" class="form-control text-center" pattern="[0-9]{2}/[0-9]{2}" maxlength="5" id="expirationDate" autocomplete="cc-exp" name="expirationDate" placeholder="MM/YY" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Expiration Date (MM/YY).
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" pattern="[0-9]{3}" minlength="3" maxlength="3" class="form-control" id="cvv" placeholder="123" autocomplete="cc-csc" name="cvv" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid CVV.
+                            </div>
+                        </div>
+                        <div class="col-12 my-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termsConditions" name="termsConditions" required>
+                                <label class="form-check-label" for="termsConditions">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button class="btn btn-success" type="submit">Donate</button>
+                        </div>
                     </form>
 
                 </div>
             </section>
         </article>
-        
+
     </main>
     <footer class="bg-body-tertiary text-center text-lg-start footer mt-auto">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
             © 2025 Copyright:
             <a class="text-body" href="#">
                 <img src="/img/button_15982812.png" alt="Logo" width="40" height="30"
                     class="d-inline-block align-text-top">
-                     Charity123</a>
+                Charity123</a>
         </div>
     </footer>
 </body>
